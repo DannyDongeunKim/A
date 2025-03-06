@@ -1,0 +1,42 @@
+<div class="container-fluid">
+  <h2>Renewal Report</h2>
+    <div class="row mb-3">
+        <div class="col-md-4">
+            <label for="startYear">Start Date:</label>
+            <select id="startYear" class="form-control"></select>
+            <select id="startMonth" class="form-control"></select>
+        </div>
+        <div class="col-md-4">
+            <label for="endYear">End Date:</label>
+            <select id="endYear" class="form-control"></select>
+            <select id="endMonth" class="form-control"></select>
+        </div>
+        <div class="col-md-4">
+            <button class="btn btn-primary mt-4" onclick="filterData()">Filter</button>
+        </div>
+    </div>
+  <table id="myTable" class="table table-striped table-bordered" style="width:100%">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Customer</th>
+        <th>Contract End Date</th>
+        <th>Status</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td>Customer A</td>
+        <td>2024-06-30</td>
+        <td>Pending</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>Customer B</td>
+        <td>2024-07-15</td>
+        <td>Sent</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
