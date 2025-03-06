@@ -1,120 +1,124 @@
 /* Material Design Baseline Colors */
 :root {
-  --md-sys-color-primary: #006874; /* Material Design Primary Color */
-  --md-sys-color-on-primary: #ffffff; /* Material Design Text Color on Primary */
-  --md-sys-color-primary-container: #99f0ff; /* Material Design Primary Container Color */
-  --md-sys-color-on-primary-container: #001f24; /* Material Design Text Color on Primary Container */
-  --md-sys-color-secondary: #4a6267; /* Material Design Secondary Color */
-  --md-sys-color-on-secondary: #ffffff; /* Material Design Text Color on Secondary */
-  --md-sys-color-secondary-container: #cce8ef; /* Material Design Secondary Container Color */
-  --md-sys-color-on-secondary-container: #051f23; /* Material Design Text Color on Secondary Container */
-  --md-sys-color-tertiary: #535f70; /* Material Design Tertiary Color */
-  --md-sys-color-on-tertiary: #ffffff; /* Material Design Text Color on Tertiary */
-  --md-sys-color-tertiary-container: #dbe3f7; /* Material Design Tertiary Container Color */
-  --md-sys-color-on-tertiary-container: #101c2b; /* Material Design Text Color on Tertiary Container */
-  --md-sys-color-error: #ba1a1a; /* Material Design Error Color */
-  --md-sys-color-error-container: #ffdad6; /* Material Design Error Container Color */
-  --md-sys-color-on-error: #ffffff; /* Material Design Text Color on Error */
-  --md-sys-color-on-error-container: #410002; /* Material Design Text Color on Error Container */
-  --md-sys-color-background: #fbfcfd; /* Material Design Background Color */
-  --md-sys-color-on-background: #191c1d; /* Material Design Text Color on Background */
-  --md-sys-color-surface: #fbfcfd; /* Material Design Surface Color */
-  --md-sys-color-on-surface: #191c1d; /* Material Design Text Color on Surface */
-  --md-sys-color-surface-variant: #dbe4e6; /* Material Design Surface Variant Color */
-  --md-sys-color-on-surface-variant: #3f484a; /* Material Design Text Color on Surface Variant */
-  --md-sys-color-outline: #6f797b; /* Material Design Outline Color */
-  --md-sys-color-inverse-on-surface: #eff1f1; /* Material Design Inverse Text Color on Surface */
-  --md-sys-color-inverse-surface: #2d3132; /* Material Design Inverse Surface Color */
-  --md-sys-color-inverse-primary: #4fd8eb; /* Material Design Inverse Primary Color */
-  --md-sys-color-shadow: #000000; /* Material Design Shadow Color */
-  --md-sys-color-surface-tint: #006874; /* Material Design Surface Tint Color */
-  --md-sys-color-outline-variant: #bfc8ca; /* Material Design Outline Variant Color */
-  --md-sys-color-scrim: #000000; /* Material Design Scrim Color */
+  --md-sys-color-primary: #006874;
+  --md-sys-color-on-primary: #ffffff;
+  --md-sys-color-primary-container: #99f0ff;
+  --md-sys-color-on-primary-container: #001f24;
+  --md-sys-color-secondary: #4a6267;
+  --md-sys-color-on-secondary: #ffffff;
+  --md-sys-color-secondary-container: #cce8ef;
+  --md-sys-color-on-secondary-container: #051f23;
+  --md-sys-color-tertiary: #535f70;
+  --md-sys-color-on-tertiary: #ffffff;
+  --md-sys-color-tertiary-container: #dbe3f7;
+  --md-sys-color-on-tertiary-container: #101c2b;
+  --md-sys-color-error: #ba1a1a;
+  --md-sys-color-error-container: #ffdad6;
+  --md-sys-color-on-error: #ffffff;
+  --md-sys-color-on-error-container: #410002;
+  --md-sys-color-background: #fbfcfd;
+  --md-sys-color-on-background: #191c1d;
+  --md-sys-color-surface: #fbfcfd;
+  --md-sys-color-on-surface: #191c1d;
+  --md-sys-color-surface-variant: #dbe4e6;
+  --md-sys-color-on-surface-variant: #3f484a;
+  --md-sys-color-outline: #6f797b;
+  --md-sys-color-inverse-on-surface: #eff1f1;
+  --md-sys-color-inverse-surface: #2d3132;
+  --md-sys-color-inverse-primary: #4fd8eb;
+  --md-sys-color-shadow: #000000;
+  --md-sys-color-surface-tint: #006874;
+  --md-sys-color-outline-variant: #bfc8ca;
+  --md-sys-color-scrim: #000000;
 }
 
 body {
-  font-family: 'Noto Sans KR', sans-serif; /* body 폰트 설정: Noto Sans KR, sans-serif */
-  font-size: 12px; /* body 기본 폰트 크기: 12px */
-  background-color: var(--md-sys-color-background); /* body 배경색: Material Design 배경색 변수 사용 */
-  color: var(--md-sys-color-on-background); /* body 글자색: Material Design 배경색 위 글자색 변수 사용 */
-  margin: 0; /* body 마진: 0 */
-  padding: 0; /* body 패딩: 0 */
+  font-family: 'Noto Sans KR', sans-serif;
+  font-size: 12px;
+  background-color: var(--md-sys-color-background);
+  color: var(--md-sys-color-on-background);
+  margin: 0;
+  padding: 0;
 }
 
 .wrapper {
-    display: flex; /* wrapper 클래스: flexbox 레이아웃 사용 */
+    display: flex;
 }
 
 #sidebar {
-    width: 250px; /* 사이드바 너비: 250px */
-    height: 100vh; /* 사이드바 높이: 뷰포트 높이 100% */
-    background-color: var(--md-sys-color-surface); /* 사이드바 배경색: Material Design Surface Color */
-    color: var(--md-sys-color-on-surface); /* 사이드바 글자색: Material Design Surface Color 위 글자색 */
-    position: fixed; /* 사이드바 position: fixed (스크롤 시 고정) */
-    top: 0; /* 사이드바 top: 0 (화면 상단에 붙임) */
-    left: 0; /* 사이드바 left: 0 (화면 왼쪽에 붙임) */
-    overflow-x: hidden; /* 사이드바 가로 스크롤 숨김 */
-    padding-top: 20px; /* 사이드바 상단 패딩: 20px */
+    width: 250px;
+    height: 100vh;
+    background-color: var(--md-sys-color-surface);
+    color: var(--md-sys-color-on-surface);
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow-x: hidden;
+    padding-top: 20px;
 }
 
 #sidebar a {
-    padding: 10px 15px; /* 사이드바 링크 패딩: 상하 10px, 좌우 15px */
-    text-decoration: none; /* 사이드바 링크 텍스트 데코레이션: none (밑줄 제거) */
-    font-size: 12px; /* 사이드바 링크 폰트 크기: 12px */
-    color: var(--md-sys-color-on-surface); /* 사이드바 링크 글자색: Material Design Surface Color 위 글자색 */
-    display: block; /* 사이드바 링크 display: block (각 링크를 블록 요소로 만들어 세로로 쌓음) */
+    padding: 10px 15px;
+    text-decoration: none;
+    font-size: 12px;
+    color: var(--md-sys-color-on-surface);
+    display: block;
 }
 
 #sidebar a:hover {
-    background-color: var(--md-sys-color-primary-container); /* 사이드바 링크 hover 시 배경색 변경: Material Design Primary Container Color */
+    background-color: var(--md-sys-color-primary-container);
 }
 
 #content {
-    margin-left: 250px; /* content 영역 왼쪽 마진: 사이드바 너비만큼 (사이드바 옆에 배치) */
-    padding: 20px; /* content 영역 패딩: 20px */
-    width: calc(100% - 250px); /* content 영역 너비: 100%에서 사이드바 너비 제외 */
+    margin-left: 250px;
+    padding: 20px;
+    width: calc(100% - 250px);
 }
 
 #header-container {
-  margin-bottom: 20px; /* header-container 아래쪽 마진: 20px */
+  margin-bottom: 20px;
 }
 
 .dataTables_wrapper {
-  width: 100%; /* DataTable wrapper 클래스 너비: 100% */
+  width: 100%;
 }
 
 .template-dashboard-content {
-    font-size: 12px; /* template-dashboard-content 클래스 폰트 크기: 12px */
+    font-size: 12px;
 }
 
 button {
-  font-size: 12px; /* button 요소 기본 폰트 크기: 12px */
+  font-size: 12px;
 }
 
 h2 {
-  font-size: 14px !important; /* h2 요소 폰트 크기: 14px (!important: 우선순위 높임) */
+  font-size: 14px !important;
 }
 
 .btn {
-  font-size: 12px; /* btn 클래스 폰트 크기: 12px */
+  font-size: 12px;
 }
 
 /* Apply btn-sm class to all buttons */
 button, .btn {
-    padding: 0.25rem 0.5rem; /* button, btn 클래스 패딩: 상하 0.25rem, 좌우 0.5rem */
-    font-size: 0.875rem; /* button, btn 클래스 폰트 크기: 0.875rem */
-    line-height: 1.5; /* button, btn 클래스 줄 높이: 1.5 */
-    border-radius: 0.2rem; /* button, btn 클래스 border-radius: 0.2rem */
+    padding: 0.25rem 0.5rem;
+    font-size: 0.875rem;
+    line-height: 1.5;
+    border-radius: 0.2rem;
 }
 
 /* Style for action links */
 .template-dashboard-content a {
-    color: green; /* template-dashboard-content 내 a 태그 글자색: green */
-    text-decoration: none; /* template-dashboard-content 내 a 태그 텍스트 데코레이션: none (밑줄 제거) */
-    cursor: pointer; /* template-dashboard-content 내 a 태그 커서: pointer (마우스 오버 시 손가락 모양) */
+    color: green;
+    text-decoration: none;
+    cursor: pointer;
 }
 
 /* DataTable text font size */
-table.dataTable td, table.dataTable th, table.dataTable page-link,  {
-  font-size: 12px; /* DataTable 테이블 셀, 헤더, 페이지 링크 폰트 크기: 12px */
+table.dataTable  {
+  font-size: 12px;
+}
+
+.page-link{
+	font-size: 12px;
 }

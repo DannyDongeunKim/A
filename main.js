@@ -1,97 +1,96 @@
-import 'bootstrap/dist/css/bootstrap.min.css'; // Bootstrap CSS import
-import 'datatables.net-bs5/css/dataTables.bootstrap5.min.css'; // DataTables Bootstrap 5 CSS import
-import 'datatables.net-responsive-bs5/css/responsive.bootstrap5.min.css'; // DataTables Responsive Bootstrap 5 CSS import
-import 'datatables.net-buttons-bs5/css/buttons.bootstrap5.min.css'; // DataTables Buttons Bootstrap 5 CSS import
-import './style.css'; // Custom CSS import
-import $ from 'jquery'; // jQuery import
-import 'datatables.net'; // DataTables import
-import 'datatables.net-bs5'; // DataTables Bootstrap 5 integration import
-import 'datatables.net-responsive'; // DataTables Responsive extension import
-import 'datatables.net-responsive-bs5'; // DataTables Responsive Bootstrap 5 integration import
-import 'datatables.net-buttons'; // DataTables Buttons extension import
-import 'datatables.net-buttons-bs5'; // DataTables Buttons Bootstrap 5 integration import
-import { Chart, registerables } from 'chart.js'; // Chart.js import and registerables registration
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'datatables.net-bs5/css/dataTables.bootstrap5.min.css'
+import 'datatables.net-responsive-bs5/css/responsive.bootstrap5.min.css';
+import 'datatables.net-buttons-bs5/css/buttons.bootstrap5.min.css';
+import './style.css';
+import $ from 'jquery';
+import 'datatables.net';
+import 'datatables.net-bs5';
+import 'datatables.net-responsive';
+import 'datatables.net-responsive-bs5';
+import 'datatables.net-buttons';
+import 'datatables.net-buttons-bs5';
+import { Chart, registerables } from 'chart.js';
 
-Chart.register(...registerables); // Chart.js registerables 등록 (Chart.js v3+ requires this)
+Chart.register(...registerables);
 
-$(document).ready(function() { // jQuery document ready function (DOM fully loaded)
+$(document).ready(function() {
 
-  function loadPage(page) { // loadPage function definition (page: HTML page to load)
-      const contentDiv = $('#content'); // Get content div element by ID
+  loadPage('home.html');
 
-    $.get(page, function(data) { // jQuery AJAX GET request to fetch page content
-          contentDiv.html(data); // Set fetched HTML data to content div
+  function loadPage(page) {
+      const contentDiv = $('#content');
 
-      if (page === 'home.html') { // Check if loaded page is home.html
-        initializeHomePage(); // Initialize home page specific scripts
+    $.get(page, function(data) {
+          contentDiv.html(data);
+
+      if (page === 'home.html') {
+        initializeHomePage();
       }
 
-      if(page === 'template_dashboard.html'){ // Check if loaded page is template_dashboard.html
-        initializeTemplateDashboard(); // Initialize template dashboard specific scripts
+      if(page === 'template_dashboard.html'){
+        initializeTemplateDashboard();
       }
-
-      // Load header and sidebar AFTER the main content is loaded
-      $('#header-container').load('header.html', function() { // Load header.html into header-container div
-        $('#sidebar').load('sidebar.html'); // Load sidebar.html into sidebar div after header is loaded
-      });
     });
   }
 
-    function initializeHomePage() { // initializeHomePage function definition (for home.html)
+    function initializeHomePage() {
         // Pie Chart
-        var ctxPie = document.getElementById('pieChart').getContext('2d'); // Get pie chart canvas context
-        var myPieChart = new Chart(ctxPie, { // Create new Chart.js pie chart instance
-            type: 'pie', // Chart type: pie
-            data: { // Chart data configuration
-                labels: ['Red', 'Blue', 'Yellow'], // Pie chart labels
-                datasets: [{ // Datasets array
-                    data: [10, 20, 30], // Data values for each slice
-                    backgroundColor: ['red', 'blue', 'yellow'] // Background colors for each slice
+        var ctxPie = document.getElementById('pieChart').getContext('2d');
+        var myPieChart = new Chart(ctxPie, {
+            type: 'pie',
+            data: {
+                labels: ['Red', 'Blue', 'Yellow'],
+                datasets: [{
+                    data: [10, 20, 30],
+                    backgroundColor: ['red', 'blue', 'yellow']
                 }]
             }
         });
 
         // Bar Graph
-        var ctxBar = document.getElementById('barGraph').getContext('2d'); // Get bar graph canvas context
-        var myBarGraph = new Chart(ctxBar, { // Create new Chart.js bar graph instance
-            type: 'bar', // Chart type: bar
-            data: { // Chart data configuration
-                labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'], // Bar graph labels (months)
-                datasets: [{ // Datasets array
-                    label: 'Sales', // Dataset label
-                    data: [12, 19, 3, 5, 2, 3], // Data values for each bar (sales figures)
-                    backgroundColor: 'rgba(75, 192, 192, 0.2)', // Bar background color (RGBA with transparency)
-                    borderColor: 'rgba(75, 192, 192, 1)', // Bar border color (RGBA)
-                    borderWidth: 1 // Bar border width
+        var ctxBar = document.getElementById('barGraph').getContext('2d');
+        var myBarGraph = new Chart(ctxBar, {
+            type: 'bar',
+            data: {
+                labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'],
+                datasets: [{
+                    label: 'Sales',
+                    data: [12, 19, 3, 5, 2, 3],
+                    backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                    borderColor: 'rgba(75, 192, 192, 1)',
+                    borderWidth: 1
                 }]
             },
-            options: { // Chart options configuration
-                scales: { // Scales configuration
-                    y: { // Y-axis configuration
-                        beginAtZero: true // Start Y-axis from zero
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
                     }
                 }
             }
         });
     }
 
-  function initializeTemplateDashboard() { // initializeTemplateDashboard function definition (for template_dashboard.html)
-    $('#myTable').DataTable({ // Initialize DataTable on table with ID 'myTable'
-      responsive: true, // Enable responsive extension
-      "language": { // Language settings
-        "url": "//cdn.datatables.net/plug-ins/1.10.25/i18n/Korean.json" // Korean language localization file URL
+  function initializeTemplateDashboard() {
+    $('#myTable').DataTable({
+      responsive: true,
+      "language": {
+        "url": "//cdn.datatables.net/plug-ins/1.10.25/i18n/Korean.json"
       },
-      "columnDefs": [ // Column definitions
-        { "orderable": false, "targets": 4 } // Disable sorting for the 5th column (index 4, Action column)
+      "columnDefs": [
+        { "orderable": false, "targets": 4 } // Disable sorting for the "Action" column
       ]
     });
   }
 
-    $(document).on('click', '#sidebar a', function(e) { // jQuery event handler for click events on sidebar links
-        e.preventDefault(); // Prevent default link behavior (page navigation)
-        var page = $(this).attr('href'); // Get the href attribute value of the clicked link (page to load)
-        loadPage(page); // Call loadPage function to load the selected page
+    $(document).on('click', '#sidebar a', function(e) {
+        e.preventDefault();
+        var page = $(this).attr('href');
+        loadPage(page);
     });
 
-    loadPage('index.html'); // Initial page load: load home.html on document ready
+    // Load header and sidebar
+    $('#header-container').load('header.html');
+    $('#sidebar').load('sidebar.html');
 });
