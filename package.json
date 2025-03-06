@@ -1,30 +1,25 @@
 {
-  "name": "management-site",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "name": "mailing-automation",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "dependencies": {
     "bootstrap": "^5.3.3",
-    "chart.js": "^4.4.8",
-    "datatables.net": "^1.13.11",
-    "datatables.net-bs5": "^1.13.11",
-    "datatables.net-buttons": "^2.4.2",
-    "datatables.net-buttons-bs5": "^2.4.2",
+    "chart.js": "^4.4.4",
+    "datatables.net": "^1.13.10",
+    "datatables.net-bs5": "^1.13.10",
+    "datatables.net-buttons": "^2.5.0",
+    "datatables.net-buttons-bs5": "^2.5.0",
     "datatables.net-responsive": "^2.5.0",
     "datatables.net-responsive-bs5": "^2.5.0",
-    "font-awesome": "^4.7.0",
     "jquery": "^3.7.1"
   },
   "devDependencies": {
-    "@fortawesome/fontawesome-free": "^6.5.1",
-    "vite": "^4.5.2"
+    "vite": "^5.2.0"
   }
 }

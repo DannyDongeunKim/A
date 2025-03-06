@@ -1,40 +1,27 @@
-<div class="container-fluid">
-    <h2>Info Report</h2>
-    <div class="row mb-3">
-        <div class="col-md-4">
-            <label for="startDate">Start Date:</label>
-            <input type="date" id="startDate" class="form-control">
-        </div>
-        <div class="col-md-4">
-            <label for="endDate">End Date:</label>
-            <input type="date" id="endDate" class="form-control">
-        </div>
-        <div class="col-md-4">
-            <button class="btn btn-primary mt-4" onclick="filterData()">Filter</button>
-        </div>
-    </div>
-    <table id="myTable" class="table table-striped table-bordered" style="width:100%">
-        <thead>
-            <tr>
-                <th>ID</th>
-                <th>Newsletter Title</th>
-                <th>Send Date</th>
-                <th>Status</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>1</td>
-                <td>Newsletter 1</td>
-                <td>2024-04-01</td>
-                <td>Sent</td>
-            </tr>
-            <tr>
-                <td>2</td>
-                <td>Newsletter 2</td>
-                <td>2024-04-15</td>
-                <td>Sent</td>
-            </tr>
-        </tbody>
-    </table>
+<div class="container-fluid"> <!-- Bootstrap container-fluid for full-width container -->
+  <h2>Info Report</h2> <!-- 페이지 제목: Info Report -->
+  <table id="myTable" class="table table-striped table-bordered" style="width:100%"> <!-- DataTable table with Bootstrap striped and bordered styles, and 100% width -->
+    <thead> <!-- Table header -->
+      <tr> <!-- Header row -->
+        <th>ID</th> <!-- Header cell for ID -->
+        <th>Title</th> <!-- Header cell for Title -->
+        <th>Created Date</th> <!-- Header cell for Created Date -->
+        <th>Status</th> <!-- Header cell for Status -->
+      </tr>
+    </thead>
+    <tbody> <!-- Table body -->
+      <tr> <!-- Table row -->
+        <td>1</td> <!-- Table data cell for ID: 1 -->
+        <td>Report A</td> <!-- Table data cell for Title: Report A -->
+        <td>2024-05-01</td> <!-- Table data cell for Created Date: 2024-05-01 -->
+        <td>Draft</td> <!-- Table data cell for Status: Draft -->
+      </tr>
+      <tr> <!-- Table row -->
+        <td>2</td> <!-- Table data cell for ID: 2 -->
+        <td>Report B</td> <!-- Table data cell for Title: Report B -->
+        <td>2024-05-15</td> <!-- Table data cell for Created Date: 2024-05-15 -->
+        <td>Published</td> <!-- Table data cell for Status: Published -->
+      </tr>
+    </tbody>
+  </table>
 </div>

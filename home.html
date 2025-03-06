@@ -1,40 +1,13 @@
-<div class="container-fluid">
-  <h2>Dashboard</h2>
-  <div class="row">
-    <div class="col-md-6">
-      <canvas id="pieChart"></canvas>
+<div class="container-fluid"> <!-- Bootstrap container-fluid for full-width container -->
+    <h2>Home Dashboard</h2> <!-- 홈 대시보드 제목 -->
+    <div class="row"> <!-- Bootstrap row for layout -->
+        <div class="col-md-6"> <!-- Bootstrap column (medium devices and up, 1/2 width) for Pie Chart -->
+            <h3>Pie Chart</h3> <!-- Pie Chart 제목 -->
+            <canvas id="pieChart" width="400" height="400"></canvas> <!-- Canvas element for Pie Chart -->
+        </div>
+        <div class="col-md-6"> <!-- Bootstrap column (medium devices and up, 1/2 width) for Bar Graph -->
+            <h3>Bar Graph</h3> <!-- Bar Graph 제목 -->
+            <canvas id="barGraph" width="400" height="400"></canvas> <!-- Canvas element for Bar Graph -->
+        </div>
     </div>
-    <div class="col-md-6">
-      <canvas id="barGraph"></canvas>
-    </div>
-  </div>
-  <div class="row mt-4">
-    <div class="col-md-12">
-      <h3>Incomplete Items This Week</h3>
-      <table id="myTable" class="table table-striped table-bordered" style="width:100%">
-        <thead>
-          <tr>
-            <th>ID</th>
-            <th>Task</th>
-            <th>Due Date</th>
-            <th>Status</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>1</td>
-            <td>Task A</td>
-            <td>2024-05-10</td>
-            <td>Pending</td>
-          </tr>
-          <tr>
-            <td>2</td>
-            <td>Task B</td>
-            <td>2024-05-12</td>
-            <td>In Progress</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-  </div>
 </div>

@@ -1,51 +1,51 @@
-<div class="container-fluid template-dashboard-content">
-  <h2>Template Dashboard</h2>
-  <button class="btn btn-primary mb-3">New Template</button>
-  <table id="myTable" class="table table-striped table-sm table-hover" style="width:100%">
-    <thead class='table-dark'>
-      <tr>
-        <th>Template Name</th>
-        <th>Title</th>
-        <th style="align-items: center">Modified Date</th>
-        <th>Applied Process Count</th>
-        <th>Action</th>
+<div class="container-fluid template-dashboard-content"> <!-- Bootstrap container-fluid for full-width container, and custom class template-dashboard-content -->
+  <h2>Template Dashboard</h2> <!-- 페이지 제목: Template Dashboard -->
+  <table id="myTable" class="table table-striped table-bordered" style="width:100%"> <!-- DataTable table with Bootstrap striped and bordered styles, and 100% width -->
+    <thead> <!-- Table header -->
+      <tr> <!-- Header row -->
+        <th>Template Name</th> <!-- Header cell for Template Name -->
+        <th>Title</th> <!-- Header cell for Title -->
+        <th>Modified Date</th> <!-- Header cell for Modified Date -->
+        <th>Applied Process Count</th> <!-- Header cell for Applied Process Count -->
+        <th>Action</th> <!-- Header cell for Action -->
       </tr>
     </thead>
-    <tbody>
-      <tr>
-        <td>Template 1</td>
-        <td>Document Review</td>
-        <td>2024-03-01</td>
-        <td>150</td>
-        <td>
-					<a href='#' onclick="alert('Copy');">Copy</a>&nbsp;	
-					<a href='#' onclick="alert('Edit');">Edit</i></a>&nbsp;
-					<a href='#' onclick="alert('Delete');">Delete</a>&nbsp;	
-					<a href='#' onclick="alert('Preview');">Preview</a>&nbsp; 
-				</td>
+    <tbody> <!-- Table body -->
+      <tr> <!-- Table row -->
+        <td>Template A</td> <!-- Table data cell for Template Name: Template A -->
+        <td>Title 1</td> <!-- Table data cell for Title: Title 1 -->
+        <td>2024-05-10</td> <!-- Table data cell for Modified Date: 2024-05-10 -->
+        <td>10</td> <!-- Table data cell for Applied Process Count: 10 -->
+        <td> <!-- Table data cell for Action -->
+          <a href="#" class="action-btn copy-btn" title="Copy"><i class="fa fa-copy"></i></a> <!-- Copy action link with Font Awesome copy icon -->
+          <a href="#" class="action-btn modify-btn" title="Modify"><i class="fa fa-pencil"></i></a> <!-- Modify action link with Font Awesome pencil icon -->
+          <a href="#" class="action-btn delete-btn" title="Delete"><i class="fa fa-trash"></i></a> <!-- Delete action link with Font Awesome trash icon -->
+          <a href="#" class="action-btn preview-btn" title="Preview"><i class="fa fa-eye"></i></a> <!-- Preview action link with Font Awesome eye icon -->
+        </td>
       </tr>
-      <tr>
-        <td>Template 2</td>
-        <td>Email Campaign</td>
-        <td>2024-03-08</td>
-        <td>200</td>
-        <td>	<a href='#' onclick="alert('Copy');">Copy</a>&nbsp;	
-					<a href='#' onclick="alert('Edit');">Edit</i></a>&nbsp;
-					<a href='#' onclick="alert('Delete');">Delete</a>&nbsp;	
-					<a href='#' onclick="alert('Preview');">Preview</a>&nbsp; 
-				</td>
-	 
+      <tr> <!-- Table row -->
+        <td>Template B</td> <!-- Table data cell for Template Name: Template B -->
+        <td>Title 2</td> <!-- Table data cell for Title: Title 2 -->
+        <td>2024-05-15</td> <!-- Table data cell for Modified Date: 2024-05-15 -->
+        <td>5</td> <!-- Table data cell for Applied Process Count: 5 -->
+        <td> <!-- Table data cell for Action -->
+          <a href="#" class="action-btn copy-btn" title="Copy"><i class="fa fa-copy"></i></a> <!-- Copy action link with Font Awesome copy icon -->
+          <a href="#" class="action-btn modify-btn" title="Modify"><i class="fa fa-pencil"></i></a> <!-- Modify action link with Font Awesome pencil icon -->
+          <a href="#" class="action-btn delete-btn" title="Delete"><i class="fa fa-trash"></i></a> <!-- Delete action link with Font Awesome trash icon -->
+          <a href="#" class="action-btn preview-btn" title="Preview"><i class="fa fa-eye"></i></a> <!-- Preview action link with Font Awesome eye icon -->
+        </td>
       </tr>
-      <tr>
-        <td>Template 3</td>
-        <td>Contract Approval</td>
-        <td>2024-03-15</td>
-        <td>100</td>
-        <td>	<a href='#' onclick="alert('Copy');">Copy</a>&nbsp;	
-					<a href='#' onclick="alert('Edit');">Edit</i></a>&nbsp;
-					<a href='#' onclick="alert('Delete');">Delete</a>&nbsp;	
-					<a href='#' onclick="alert('Preview');">Preview</a>&nbsp; 
-				</td>
+       <tr> <!-- Table row -->
+        <td>Template C</td> <!-- Table data cell for Template Name: Template C -->
+        <td>Title 3</td> <!-- Table data cell for Title: Title 3 -->
+        <td>2024-05-20</td> <!-- Table data cell for Modified Date: 2024-05-20 -->
+        <td>8</td> <!-- Table data cell for Applied Process Count: 8 -->
+        <td> <!-- Table data cell for Action -->
+          <a href="#" class="action-btn copy-btn" title="Copy"><i class="fa fa-copy"></i></a> <!-- Copy action link with Font Awesome copy icon -->
+          <a href="#" class="action-btn modify-btn" title="Modify"><i class="fa fa-pencil"></i></a> <!-- Modify action link with Font Awesome pencil icon -->
+          <a href="#" class="action-btn delete-btn" title="Delete"><i class="fa fa-trash"></i></a> <!-- Delete action link with Font Awesome trash icon -->
+          <a href="#" class="action-btn preview-btn" title="Preview"><i class="fa fa-eye"></i></a> <!-- Preview action link with Font Awesome eye icon -->
+        </td>
       </tr>
     </tbody>
   </table>
