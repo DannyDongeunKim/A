@@ -1,32 +1,53 @@
 <div class="container-fluid">
   <h2>Automation Dashboard</h2>
   <button class="btn btn-primary mb-3">New Automation Process</button>
-  <table id="myTable" class="table table-striped table-bordered" style="width:100%">
-    <thead>
+
+	<h2 class="mt-4">Automation Process List</h2>
+  <table id="automationProcessTable" class="table table-striped table-sm table-hover" style="width:100%">
+    <thead class='table-dark'>
       <tr>
-        <th>ID</th>
-        <th>Process Name</th>
-        <th>Status</th>
-        <th>Actions</th>
+        <th>Process명</th>
+        <th>Template 명</th>
+        <th>제목</th>
+        <th>수정일</th>
+        <th>Action</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td>1</td>
-        <td>Process A</td>
-        <td>Active</td>
+        <td>Process 자동화 1</td>
+        <td>Template_01</td>
+        <td>자동화 메일 발송 프로세스</td>
+        <td>2024-05-20</td>
         <td>
-          <button class="btn btn-sm btn-info">Edit</button>
-          <button class="btn btn-sm btn-danger">Delete</button>
+          <a href='#' onclick="alert('복사');">복사</a>&nbsp;
+          <a href='#' onclick="alert('수정');">수정</a>&nbsp;
+          <a href='#' onclick="alert('삭제');">삭제</a>&nbsp;
+          <a href='#' onclick="alert('미리보기');">미리보기</a>
         </td>
       </tr>
       <tr>
-        <td>2</td>
-        <td>Process B</td>
-        <td>Inactive</td>
+        <td>Process 자동화 2</td>
+        <td>Template_02</td>
+        <td>정기 보고서 생성 자동화</td>
+        <td>2024-05-21</td>
         <td>
-          <button class="btn btn-sm btn-info">Edit</button>
-          <button class="btn btn-sm btn-danger">Delete</button>
+          <a href='#' onclick="alert('복사');">복사</a>&nbsp;
+          <a href='#' onclick="alert('수정');">수정</a>&nbsp;
+          <a href='#' onclick="alert('삭제');">삭제</a>&nbsp;
+          <a href='#' onclick="alert('미리보기');">미리보기</a>
+        </td>
+      </tr>
+      <tr>
+        <td>Process 자동화 3</td>
+        <td>Template_03</td>
+        <td>데이터 백업 자동화</td>
+        <td>2024-05-22</td>
+        <td>
+          <a href='#' onclick="alert('복사');">복사</a>&nbsp;
+          <a href='#' onclick="alert('수정');">수정</a>&nbsp;
+          <a href='#' onclick="alert('삭제');">삭제</a>&nbsp;
+          <a href='#' onclick="alert('미리보기');">미리보기</a>
         </td>
       </tr>
     </tbody>

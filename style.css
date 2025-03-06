@@ -32,6 +32,34 @@
   --md-sys-color-scrim: #000000;
 }
 
+@font-face {
+  font-family: 'FontAwesome';
+  src: url('./css/fontawesome/webfonts/fa-solid-900.woff2') format('woff2'),
+       url('./css/fontawesome/webfonts/fa-solid-900.woff') format('woff');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'FontAwesome';
+  src: url('./css/fontawesome/webfonts/fa-brands-400.woff2') format('woff2'),
+       url('./css/fontawesome/webfonts/fa-brands-400.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'FontAwesome';
+  src: url('./css/fontawesome/webfonts/fa-regular-400.woff2') format('woff2'),
+       url('./css/fontawesome/webfonts/fa-regular-400.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+
 body {
   font-family: 'Noto Sans KR', sans-serif;
   font-size: 12px;
